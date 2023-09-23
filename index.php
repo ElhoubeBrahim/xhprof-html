@@ -73,6 +73,7 @@ xhprof_include_js_css();
 echo "</head>";
 
 echo "<body>";
+echo "<div class='container-fluid py-3'>";
 
 $vbar  = ' class="vbar"';
 $vwbar = ' class="vwbar"';
@@ -87,5 +88,6 @@ displayXHProfReport($xhprof_runs_impl, $params, $source, $run, $wts,
                     $symbol, $sort, $run1, $run2);
 
 
+echo "</div>"; //end of container div
 echo "</body>";
 echo "</html>";

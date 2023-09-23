@@ -1433,7 +1433,7 @@ function displayXHProfReport($xhprof_runs_impl, $url_params, $source,
                          $run2);
 
   } else {
-    echo "No XHProf runs specified in the URL.";
+    echo "<div class='alert alert-warning' role='alert'>No XHProf runs specified in the URL.</div>";
     if (method_exists($xhprof_runs_impl, 'list_runs')) {
       $xhprof_runs_impl->list_runs($url_params);
     }

@@ -150,9 +150,28 @@ class XHProfRuns_Default implements iXHProfRuns {
 
   function list_runs($url_params) {
     if (is_dir($this->dir)) {
-        echo "<hr/>Existing runs:\n<ul>\n";
+        echo "<hr />";
+
         $files = glob("{$this->dir}/*.{$this->suffix}");
         usort($files, function($a,$b) {return filemtime($b) - filemtime($a);});
+
+        // If no valid runs were found
+        if (empty($files)) {
+            echo "<div class='d-flex flex-column align-items-center text-center gap-4 py-5 my-5'>";
+            echo "<img src='/img/no-data.svg' class='img-fluid' alt='No data' width='300'>";
+            echo "<div class='text-muted'>"
+                  . "<div class='mb-2'>No runs found in <pre class='d-inline'>{$this->dir}</pre></div>"
+                  . "<div>Use the dir parameter to specify the location of your runs.</div>";
+            echo "</div>";
+            echo "</div>";
+            return;
+        }
+
+        // Output a list of links to the runs in a table
+        echo "<h4 class='mb-4'>Existing runs:</h4>";
+        echo "<table class='table table-bordered'>";
+        echo "<thead class='table-light'><tr><th>Run</th><th>Source</th><th>Created</th></tr></thead>";
+
         foreach ($files as $file) {
             list($run,$source) = explode('.', basename($file));
 
@@ -161,12 +180,13 @@ class XHProfRuns_Default implements iXHProfRuns {
             $base_url_params['source'] = $source;
             $base_url_params = '?' . http_build_query($base_url_params);
 
-            echo '<li><a href="' . htmlentities($_SERVER['SCRIPT_NAME'])
-                . $base_url_params . '">'
-                . htmlentities(basename($file)) . "</a><small> "
-                . date("Y-m-d H:i:s", filemtime($file)) . "</small></li>\n";
+            echo "<tr>"
+                  . "<td><a href='{$base_url_params}'>{$run}</a></td>"
+                  . "<td>{$source}</td>"
+                  . "<td>".date("Y-m-d H:i:s", filemtime($file))."</td>";
+            echo "</tr>";
         }
-        echo "</ul>\n";
+        echo "</table>";
     }
   }
 }
