@@ -68,6 +68,8 @@ function xhprof_include_js_css($ui_dir_url_path = null) {
     " rel='stylesheet' type='text/css' />";
   echo "<link href='$ui_dir_url_path/jquery/jquery.autocomplete.css' ".
     " rel='stylesheet' type='text/css' />";
+  echo "<link href='$ui_dir_url_path/bootstrap/css/bootstrap.min.css' ".
+    " rel='stylesheet' type='text/css' />";
 
   // javascript
   echo "<script src='$ui_dir_url_path/jquery/jquery-1.2.6.js'>".
@@ -77,6 +79,8 @@ function xhprof_include_js_css($ui_dir_url_path = null) {
   echo "<script src='$ui_dir_url_path/jquery/jquery.autocomplete.js'>"
        ."</script>";
   echo "<script src='$ui_dir_url_path/js/xhprof_report.js'></script>";
+  echo "<script src='$ui_dir_url_path/bootstrap/js/bootstrap.bundle.min.js'>".
+       "</script>";
 }
 
 
