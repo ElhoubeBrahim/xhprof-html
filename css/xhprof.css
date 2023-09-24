@@ -13,6 +13,16 @@
  *  limitations under the License.
  */
 
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans-Regular.ttf');
+}
+
+body {
+  color: #444;
+  font-family: 'Noto Sans';
+}
+
 td.sorted {
   color:#0000FF;
 }
