@@ -215,3 +215,18 @@ $(document).ready(function() {
     $this.attr('title', name);
   });
 });
+
+// Enable scroll to top button
+$(document).ready(function() {
+  $('.scroll-to-top').click(function() {
+    document.body.scrollTop = 0;
+  });
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 400) {
+      $('.scroll-to-top').css('display', 'flex');
+    } else {
+      $('.scroll-to-top').css('display', 'none');
+    }
+  });
+});
