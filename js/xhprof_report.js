@@ -201,4 +201,17 @@ $(document).ready(function() {
       cur_params['symbol'] = item;
       location.search = '?' + jQuery.param(cur_params);
     });
+
+  // Hide long function names
+  $(".text-overflow").each(function() {
+    var $this = $(this);
+    var name = $this.text().trim();
+    var max_length = 85;
+
+    if (name.length > max_length) {
+      $this.text('[...] ' + name.substr(name.length - max_length));
+    }
+
+    $this.attr('title', name);
+  });
 });

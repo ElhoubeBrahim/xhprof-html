@@ -86,3 +86,32 @@ pre {
   padding: 5px 10px;
   border-radius: 5px;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+table.table-borderless td, table.table-borderless th {
+  border: none;
+}
+
+table.table thead th.sortable {
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+}
+
+table.table thead th.sortable:hover {
+  background-color: #eee;
+}
+
+/* table.table thead th.sortable::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+} */

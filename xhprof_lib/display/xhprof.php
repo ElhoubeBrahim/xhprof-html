@@ -238,42 +238,42 @@ $sortable_columns = array("fn" => 1,
 $descriptions = array(
                       "fn" => "Function Name",
                       "ct" =>  "Calls",
-                      "Calls%" => "Calls%",
+                      "Calls%" => "Calls %",
 
-                      "wt" => "Incl. Wall Time<br>(microsec)",
-                      "IWall%" => "IWall%",
-                      "excl_wt" => "Excl. Wall Time<br>(microsec)",
-                      "EWall%" => "EWall%",
+                      "wt" => "Incl. Wall Time",
+                      "IWall%" => "IWall %",
+                      "excl_wt" => "Excl. Wall Time",
+                      "EWall%" => "EWall %",
 
-                      "ut" => "Incl. User<br>(microsecs)",
-                      "IUser%" => "IUser%",
-                      "excl_ut" => "Excl. User<br>(microsec)",
-                      "EUser%" => "EUser%",
+                      "ut" => "Incl. User",
+                      "IUser%" => "IUser %",
+                      "excl_ut" => "Excl. User",
+                      "EUser%" => "EUser %",
 
-                      "st" => "Incl. Sys <br>(microsec)",
-                      "ISys%" => "ISys%",
-                      "excl_st" => "Excl. Sys <br>(microsec)",
-                      "ESys%" => "ESys%",
+                      "st" => "Incl. Sys",
+                      "ISys%" => "ISys %",
+                      "excl_st" => "Excl. Sys",
+                      "ESys%" => "ESys %",
 
-                      "cpu" => "Incl. CPU<br>(microsecs)",
-                      "ICpu%" => "ICpu%",
-                      "excl_cpu" => "Excl. CPU<br>(microsec)",
-                      "ECpu%" => "ECPU%",
+                      "cpu" => "Incl. CPU",
+                      "ICpu%" => "ICpu %",
+                      "excl_cpu" => "Excl. CPU",
+                      "ECpu%" => "ECPU %",
 
-                      "mu" => "Incl.<br>MemUse<br>(bytes)",
-                      "IMUse%" => "IMemUse%",
-                      "excl_mu" => "Excl.<br>MemUse<br>(bytes)",
-                      "EMUse%" => "EMemUse%",
+                      "mu" => "Incl. MemUse (bytes)",
+                      "IMUse%" => "IMemUse %",
+                      "excl_mu" => "Excl. MemUse (bytes)",
+                      "EMUse%" => "EMemUse %",
 
-                      "pmu" => "Incl.<br> PeakMemUse<br>(bytes)",
-                      "IPMUse%" => "IPeakMemUse%",
-                      "excl_pmu" => "Excl.<br>PeakMemUse<br>(bytes)",
-                      "EPMUse%" => "EPeakMemUse%",
+                      "pmu" => "Incl. PeakMemUse (bytes)",
+                      "IPMUse%" => "IPeakMemUse %",
+                      "excl_pmu" => "Excl. PeakMemUse (bytes)",
+                      "EPMUse%" => "EPeakMemUse %",
 
                       "samples" => "Incl. Samples",
-                      "ISamples%" => "ISamples%",
+                      "ISamples%" => "ISamples %",
                       "excl_samples" => "Excl. Samples",
-                      "ESamples%" => "ESamples%",
+                      "ESamples%" => "ESamples %",
                       );
 
 // Formatting Callback Functions...
@@ -323,37 +323,37 @@ $format_cbk = array(
 $diff_descriptions = array(
                       "fn" => "Function Name",
                       "ct" =>  "Calls Diff",
-                      "Calls%" => "Calls<br>Diff%",
+                      "Calls%" => "Calls Diff%",
 
-                      "wt" => "Incl. Wall<br>Diff<br>(microsec)",
-                      "IWall%" => "IWall<br> Diff%",
-                      "excl_wt" => "Excl. Wall<br>Diff<br>(microsec)",
-                      "EWall%" => "EWall<br>Diff%",
+                      "wt" => "Incl. Wall Diff",
+                      "IWall%" => "IWall Diff%",
+                      "excl_wt" => "Excl. Wall Diff",
+                      "EWall%" => "EWall Diff%",
 
-                      "ut" => "Incl. User Diff<br>(microsec)",
-                      "IUser%" => "IUser<br>Diff%",
-                      "excl_ut" => "Excl. User<br>Diff<br>(microsec)",
+                      "ut" => "Incl. User Diff",
+                      "IUser%" => "IUser Diff%",
+                      "excl_ut" => "Excl. User Diff",
                       "EUser%" => "EUser<br>Diff%",
 
-                      "cpu" => "Incl. CPU Diff<br>(microsec)",
-                      "ICpu%" => "ICpu<br>Diff%",
-                      "excl_cpu" => "Excl. CPU<br>Diff<br>(microsec)",
+                      "cpu" => "Incl. CPU Diff",
+                      "ICpu%" => "ICpu Diff%",
+                      "excl_cpu" => "Excl. CPU Diff",
                       "ECpu%" => "ECpu<br>Diff%",
 
-                      "st" => "Incl. Sys Diff<br>(microsec)",
-                      "ISys%" => "ISys<br>Diff%",
-                      "excl_st" => "Excl. Sys Diff<br>(microsec)",
-                      "ESys%" => "ESys<br>Diff%",
+                      "st" => "Incl. Sys Diff",
+                      "ISys%" => "ISys Diff%",
+                      "excl_st" => "Excl. Sys Diff",
+                      "ESys%" => "ESys Diff%",
 
-                      "mu" => "Incl.<br>MemUse<br>Diff<br>(bytes)",
+                      "mu" => "Incl. MemUse Diff (bytes)",
                       "IMUse%" => "IMemUse<br>Diff%",
-                      "excl_mu" => "Excl.<br>MemUse<br>Diff<br>(bytes)",
+                      "excl_mu" => "Excl. MemUse Diff (bytes)",
                       "EMUse%" => "EMemUse<br>Diff%",
 
-                      "pmu" => "Incl.<br> PeakMemUse<br>Diff<br>(bytes)",
-                      "IPMUse%" => "IPeakMemUse<br>Diff%",
-                      "excl_pmu" => "Excl.<br>PeakMemUse<br>Diff<br>(bytes)",
-                      "EPMUse%" => "EPeakMemUse<br>Diff%",
+                      "pmu" => "Incl. PeakMemUse Diff (bytes)",
+                      "IPMUse%" => "IPeakMemUse Diff%",
+                      "excl_pmu" => "Excl. PeakMemUse Diff (bytes)",
+                      "EPMUse%" => "EPeakMemUse Diff%",
 
                       "samples" => "Incl. Samples Diff",
                       "ISamples%" => "ISamples Diff%",
@@ -454,10 +454,7 @@ function profiler_report ($url_params,
   global $totals;
   global $totals_1;
   global $totals_2;
-  global $stats;
-  global $pc_stats;
   global $diff_mode;
-  global $base_path;
 
   // if we are reporting on a specific function, we can trim down
   // the report(s) to just stuff that is relevant to this function.
@@ -479,72 +476,167 @@ function profiler_report ($url_params,
     $symbol_tab = xhprof_compute_flat_info($run1_data, $totals);
   }
 
-  $run1_txt = sprintf("<b>Run #%s:</b> %s",
-                      $run1, $run1_desc);
-
-  $base_url_params = xhprof_array_unset(xhprof_array_unset($url_params,
-                                                           'symbol'),
-                                        'all');
-
-  $top_link_query_string = "$base_path/?" . http_build_query($base_url_params);
+  $base_url_params = xhprof_array_unset(xhprof_array_unset($url_params, 'symbol'), 'all');
 
   if ($diff_mode) {
-    $diff_text = "Diff";
     $base_url_params = xhprof_array_unset($base_url_params, 'run1');
     $base_url_params = xhprof_array_unset($base_url_params, 'run2');
-    $run1_link = xhprof_render_link('View Run #' . $run1,
-                           "$base_path/?" .
-                           http_build_query(xhprof_array_set($base_url_params,
-                                                      'run',
-                                                      $run1)));
-    $run2_txt = sprintf("<b>Run #%s:</b> %s",
-                        $run2, $run2_desc);
 
-    $run2_link = xhprof_render_link('View Run #' . $run2,
-                                    "$base_path/?" .
-                        http_build_query(xhprof_array_set($base_url_params,
-                                                          'run',
-                                                          $run2)));
-  } else {
-    $diff_text = "Run";
-  }
-
-  // set up the action links for operations that can be done on this report
-  $links = array();
-  $links [] =  xhprof_render_link("View Top Level $diff_text Report",
-                                 $top_link_query_string);
-
-  if ($diff_mode) {
     $inverted_params = $url_params;
     $inverted_params['run1'] = $url_params['run2'];
     $inverted_params['run2'] = $url_params['run1'];
-
-    // view the different runs or invert the current diff
-    $links [] = $run1_link;
-    $links [] = $run2_link;
-    $links [] = xhprof_render_link('Invert ' . $diff_text . ' Report',
-                           "$base_path/?".
-                           http_build_query($inverted_params));
   }
 
-  // lookup function typeahead form
-  $links [] = '<input class="function_typeahead" ' .
-              ' type="input" size="40" maxlength="100" />';
+  $possible_metrics = xhprof_get_possible_metrics();
+  global $display_calls;
+  global $metrics;
+  global $descriptions;
 
-  echo xhprof_render_actions($links);
+  $runs_data = [];
+  $runs_data[] = [
+    "run" => $run1,
+    "description" => $run1_desc,
+    "wall_time" => $diff_mode ? $totals_1['wt'] : $totals['wt'],
+    "function_calls" => $diff_mode ? $totals_1['ct'] : $totals['ct'],
+    "function_calls_diff" => $diff_mode ? $totals_1['ct'] - $totals_2['ct'] : null,
+    "meta" => [],
+  ];
 
+  if ($diff_mode) {
+    $runs_data[] = [
+      "run" => $run2,
+      "description" => $run2_desc,
+      "wall_time" => $totals_2['wt'],
+      "function_calls" => $totals_2['ct'],
+      "function_calls_diff" => $totals_2['ct'] - $totals_1['ct'],
+      "meta" => [],
+    ];
+  }
 
-  echo
-    '<dl class=phprof_report_info>' .
-    '  <dt>' . $diff_text . ' Report</dt>' .
-    '  <dd>' . ($diff_mode ?
-                $run1_txt . '<br><b>vs.</b><br>' . $run2_txt :
-                $run1_txt) .
-    '  </dd>' .
-    '  <dt>Tip</dt>' .
-    '  <dd>Click a function name below to drill down.</dd>' .
-    '</dl>' .
-    '<div style="clear: both; margin: 3em 0em;"></div>';
+  foreach ($metrics as $metric) {
+    $m = $metric;
+
+    $runs_data[0]["meta"][$descriptions[$m]] = [
+      "value" => $diff_mode ? $totals_1[$m] : $totals[$m],
+      "unit" => $possible_metrics[$m][1],
+      "diff" => $diff_mode ? $totals_1[$m] - $totals_2[$m] : null,
+    ];
+
+    if ($diff_mode) {
+      $runs_data[1]["meta"][$descriptions[$m]] = [
+        "value" => $totals_2[$m],
+        "unit" => $possible_metrics[$m][1],
+        "diff" => $totals_2[$m] - $totals_1[$m],
+      ];
+    }
+  }
+
+  $callgraph_link = "/callgraph.php?" . http_build_query($url_params);
+  $top_link_query_string = "/?" . http_build_query(xhprof_array_unset(xhprof_array_unset($url_params, 'symbol'), 'all'));
+  $view_all_calls_link = "/?" . http_build_query(xhprof_array_set($url_params, 'all', 1))
+
+  ?>
+
+<!-- Report page header => Report type + Search functions -->
+<nav class="navbar bg-light rounded border mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="/img/<?= $diff_mode ? 'diff' : 'report' ?>.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      <span><?= $diff_mode ? 'Diff' : 'Run' ?> Report</span>
+    </a>
+    <div>
+      <input class="function_typeahead form-control" type="input" size="40" maxlength="100" placeholder="Search functions ...">
+    </div>
+  </div>
+</nav>
+
+<!-- List runs info -->
+<div class="d-flex mb-5">
+  <?php $i = 1; ?>
+  <?php foreach ($runs_data as $r) : ?>
+    <div class="<?= $diff_mode ? 'w-100' : 'w-50' ?>">
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <strong>Run <?= $diff_mode ? "$i " : "" ?>Info</strong>
+          <?php if ($diff_mode): ?>
+            <a
+              href="/?<?= http_build_query(xhprof_array_set($base_url_params, 'run', $r["run"])) ?>"
+              class="btn btn-primary"
+              data-bs-toggle="tooltip"
+              data-bs-title="View Run #<?= $r["run"] ?>"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+              </svg>
+            </a>
+          <?php endif; ?>
+        </div>
+        <div class="card-body">
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <th>Run</th>
+                <td><?= $r["run"] ?></td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><?= $r["description"] ?></td>
+              </tr>
+              <?php if ($display_calls): ?>
+                <tr>
+                  <th>Function Calls</th>
+                  <td>
+                    <?= number_format($r["function_calls"]) ?>&nbsp;
+                    <?php if ($diff_mode) : ?>
+                      <span class="badge bg-<?= $r["function_calls_diff"] > 0 ? 'danger' : 'success' ?>">
+                        <?= $r["function_calls_diff"] > 0 ? '+' : '' ?><?= number_format($r["function_calls_diff"]) ?>
+                      </span>
+                    <?php endif; ?>
+                  </td>
+                </tr>
+              <?php endif; ?>
+              <?php foreach ($r["meta"] as $k => $v) : ?>
+                <tr>
+                  <th><?= $k ?></th>
+                  <td>
+                    <?= number_format($v["value"]) ?> <?= $v["unit"] ?>&nbsp;
+                    <?php if ($diff_mode) : ?>
+                      <span class="badge bg-<?= $v["diff"] > 0 ? 'danger' : 'success' ?>">
+                        <?= $v["diff"] > 0 ? '+' : '' ?><?= number_format($v["diff"]) ?> <?= $v["unit"] ?>
+                      </span>
+                    <?php endif; ?>
+                  </td>
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <?php if ($diff_mode & $i == 1): ?>
+      <div class="p-4 d-flex align-items-center justify-content-center">
+        <a href="?<?= http_build_query($inverted_params) ?>" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+          </svg>
+        </a>
+      </div>
+    <?php endif; ?>
+    <?php $i++; ?>
+  <?php endforeach; ?>
+</div>
+
+<div class="d-flex justify-content-end gap-2 mb-3">
+  <a href="<?= $callgraph_link ?>" class="btn btn-secondary">View Callgraph</a>
+  <?php if (isset($_GET["symbol"])) : ?>
+    <a href="<?= $top_link_query_string ?>" class="btn btn-secondary">View Top Level</a>
+  <?php elseif(!isset($_GET["all"])) : ?>
+    <a href="<?= $view_all_calls_link ?>" class="btn btn-secondary">View All Functions</a>
+  <?php endif; ?>
+</div>
+
+  <?php
 
   // data tables
   if (!empty($rep_symbol)) {
@@ -716,65 +808,88 @@ function print_function_info($url_params, $info, $sort, $run1, $run2) {
  *
  * @author Kannan
  */
-function print_flat_data($url_params, $title, $flat_data, $sort, $run1, $run2, $limit) {
+function print_flat_data($url_params, $flat_data, $sort, $run1, $run2, $limit) {
 
   global $stats;
   global $sortable_columns;
-  global $vwbar;
-  global $base_path;
+  global $display_calls;
+  global $metrics;
+  global $totals;
+
+  function build_sort_by_query($stat, $url_params) {
+    global $base_path;
+
+    $params = [];
+    if (isset($_GET["sort"]) && $_GET["sort"] == $stat) {
+      $params = xhprof_array_unset($url_params, 'sort');
+    } else {
+      $params = xhprof_array_set($url_params, 'sort', $stat);
+    }
+
+    return "$base_path/?" . http_build_query($params);
+  }
 
   $size  = count($flat_data);
-  if (!$limit) {              // no limit
-    $limit = $size;
-    $display_link = "";
-  } else {
-    $display_link = xhprof_render_link(" [ <b class=bubble>display all </b>]",
-                                       "$base_path/?" .
-                                       http_build_query(xhprof_array_set($url_params,
-                                                                         'all', 1)));
-  }
+  $limit = $limit == 0 ? $size : $limit;
 
-  print("<h3 align=center>$title $display_link</h3><br>");
+?>
 
-  print('<table border=1 cellpadding=2 cellspacing=1 width="90%" '
-        .'rules=rows bordercolor="#bdc7d8" align=center>');
-  print('<tr bgcolor="#bdc7d8" align=right>');
+<div class="table-responsive">
+  <table class="table table-bordered table-hover" style="table-layout: fixed;">
+    <thead class="table-light">
+      <tr>
+        <?php foreach ($stats as $stat) : ?>
+          <?php $sortable = array_key_exists($stat, $sortable_columns); ?>
+          <th
+            class="<?= $sortable ? 'text-primary sortable' : '' ?>"
+            <?= $stat == "fn" ? 'width="600px"' : 'width="100px"' ?>
+            onclick="<?= $sortable ? 'window.location.href = \'' . build_sort_by_query($stat, $url_params) . '\';' : '' ?>"
+          >
+            <div class="d-flex gap-2 align-items-center">
+              <?= stat_description($stat) ?>
+              <?php if (isset($_GET["sort"]) && $_GET["sort"] == $stat) : ?>
+                <!-- Sort icon -->
+                <span class="text-body">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-numeric-down-alt" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.36 7.098c-1.137 0-1.708-.657-1.762-1.278h1.004c.058.223.343.45.773.45.824 0 1.164-.829 1.133-1.856h-.059c-.148.39-.57.742-1.261.742-.91 0-1.72-.613-1.72-1.758 0-1.148.848-1.836 1.973-1.836 1.09 0 2.063.637 2.063 2.688 0 1.867-.723 2.848-2.145 2.848zm.062-2.735c.504 0 .933-.336.933-.972 0-.633-.398-1.008-.94-1.008-.52 0-.927.375-.927 1 0 .64.418.98.934.98z"/>
+                    <path d="M12.438 8.668V14H11.39V9.684h-.051l-1.211.859v-.969l1.262-.906h1.046zM4.5 2.5a.5.5 0 0 0-1 0v9.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L4.5 12.293V2.5z"/>
+                  </svg>
+                </span>
+              <?php endif; ?>
+            </div>
+          </th>
+        <?php endforeach; ?>
+      </tr>
+    </thead>
+    <tbody>
+      <?php for ($i = 0; $i < $limit; $i++) : ?>
+        <?php $info = $flat_data[$i]; ?>
+        <?php $href = "/?" . http_build_query(xhprof_array_set($url_params, 'symbol', $info["fn"])); ?>
+        <tr>
+          <td>
+            <a href="<?= $href ?>" class="text-overflow" style="display: block; white-space: nowrap;">
+              <?= $info["fn"] ?>
+            </a>
+          </td>
+          <?php if ($display_calls) : ?>
+            <td><?= $info["ct"] ?></td>
+            <td><?= xhprof_percent_format($info["ct"] / abs($totals["ct"])) ?></td>
+          <?php endif; ?>
+          <?php foreach ($metrics as $metric) : ?>
+            <!-- Inclusive metric -->
+            <td><?= $info[$metric] ?></td>
+            <td><?= xhprof_percent_format($info[$metric] / abs($totals[$metric])) ?></td>
+            <!-- Exclusive Metric -->
+            <td><?= $info[$metric] ?></td>
+            <td><?= xhprof_percent_format($info["excl_" . $metric] / abs($totals[$metric])) ?></td>
+          <?php endforeach; ?>
+        </tr>
+      <?php endfor; ?>
+    </tbody>
+  </table>
+</div>
 
-  foreach ($stats as $stat) {
-    $desc = stat_description($stat);
-    if (array_key_exists($stat, $sortable_columns)) {
-      $href = "$base_path/?"
-              . http_build_query(xhprof_array_set($url_params, 'sort', $stat));
-      $header = xhprof_render_link($desc, $href);
-    } else {
-      $header = $desc;
-    }
-
-    if ($stat == "fn")
-      print("<th align=left><nobr>$header</th>");
-    else print("<th " . $vwbar . "><nobr>$header</th>");
-  }
-  print("</tr>\n");
-
-  if ($limit >= 0) {
-    $limit = min($size, $limit);
-    for ($i = 0; $i < $limit; $i++) {
-      print_function_info($url_params, $flat_data[$i], $sort, $run1, $run2);
-    }
-  } else {
-    // if $limit is negative, print abs($limit) items starting from the end
-    $limit = min($size, abs($limit));
-    for ($i = 0; $i < $limit; $i++) {
-      print_function_info($url_params, $flat_data[$size - $i - 1], $sort, $run1, $run2);
-    }
-  }
-  print("</table>");
-
-  // let's print the display all link at the bottom as well...
-  if ($display_link) {
-    echo '<div style="text-align: left; padding: 2em">' . $display_link . '</div>';
-  }
-
+<?php
 }
 
 /**
@@ -783,106 +898,6 @@ function print_flat_data($url_params, $title, $flat_data, $sort, $run1, $run2, $
  * @author Kannan
  */
 function full_report($url_params, $symbol_tab, $sort, $run1, $run2) {
-  global $vwbar;
-  global $vbar;
-  global $totals;
-  global $totals_1;
-  global $totals_2;
-  global $metrics;
-  global $diff_mode;
-  global $descriptions;
-  global $sort_col;
-  global $format_cbk;
-  global $display_calls;
-  global $base_path;
-
-  $possible_metrics = xhprof_get_possible_metrics();
-
-  if ($diff_mode) {
-
-    $base_url_params = xhprof_array_unset(xhprof_array_unset($url_params,
-                                                             'run1'),
-                                          'run2');
-    $href1 = "$base_path/?" .
-      http_build_query(xhprof_array_set($base_url_params,
-                                        'run', $run1));
-    $href2 = "$base_path/?" .
-      http_build_query(xhprof_array_set($base_url_params,
-                                        'run', $run2));
-
-    print("<h3><center>Overall Diff Summary</center></h3>");
-    print('<table border=1 cellpadding=2 cellspacing=1 width="30%" '
-          .'rules=rows bordercolor="#bdc7d8" align=center>' . "\n");
-    print('<tr bgcolor="#bdc7d8" align=right>');
-    print("<th></th>");
-    print("<th $vwbar>" . xhprof_render_link("Run #$run1", $href1) . "</th>");
-    print("<th $vwbar>" . xhprof_render_link("Run #$run2", $href2) . "</th>");
-    print("<th $vwbar>Diff</th>");
-    print("<th $vwbar>Diff%</th>");
-    print('</tr>');
-
-    if ($display_calls) {
-      print('<tr>');
-      print("<td>Number of Function Calls</td>");
-      print_td_num($totals_1["ct"], $format_cbk["ct"]);
-      print_td_num($totals_2["ct"], $format_cbk["ct"]);
-      print_td_num($totals_2["ct"] - $totals_1["ct"], $format_cbk["ct"], true);
-      print_td_pct($totals_2["ct"] - $totals_1["ct"], $totals_1["ct"], true);
-      print('</tr>');
-    }
-
-    foreach ($metrics as $metric) {
-      $m = $metric;
-      print('<tr>');
-      print("<td>" . str_replace("<br>", " ", $descriptions[$m]) . "</td>");
-      print_td_num($totals_1[$m], $format_cbk[$m]);
-      print_td_num($totals_2[$m], $format_cbk[$m]);
-      print_td_num($totals_2[$m] - $totals_1[$m], $format_cbk[$m], true);
-      print_td_pct($totals_2[$m] - $totals_1[$m], $totals_1[$m], true);
-      print('<tr>');
-    }
-    print('</table>');
-
-    $callgraph_report_title = '[View Regressions/Improvements using Callgraph Diff]';
-
-  } else {
-    print("<p><center>\n");
-
-    print('<table cellpadding=2 cellspacing=1 width="30%" '
-          .'bgcolor="#bdc7d8" align=center>' . "\n");
-    echo "<tr>";
-    echo "<th style='text-align:right'>Overall Summary</th>";
-    echo "<th></th>";
-    echo "</tr>";
-
-    foreach ($metrics as $metric) {
-      echo "<tr>";
-      echo "<td style='text-align:right; font-weight:bold'>Total "
-            . str_replace("<br>", " ", stat_description($metric)) . ":</td>";
-      echo "<td>" . number_format($totals[$metric]) .  " "
-           . $possible_metrics[$metric][1] . "</td>";
-      echo "</tr>";
-    }
-
-    if ($display_calls) {
-      echo "<tr>";
-      echo "<td style='text-align:right; font-weight:bold'>Number of Function Calls:</td>";
-      echo "<td>" . number_format($totals['ct']) . "</td>";
-      echo "</tr>";
-    }
-
-    echo "</table>";
-    print("</center></p>\n");
-
-    $callgraph_report_title = '[View Full Callgraph]';
-  }
-
-  print("<center><br><h3>" .
-        xhprof_render_link($callgraph_report_title,
-                    "$base_path/callgraph.php" . "?" . http_build_query($url_params))
-        . "</h3></center>");
-
-
   $flat_data = array();
   foreach ($symbol_tab as $symbol => $info) {
     $tmp = $info;
@@ -891,35 +906,8 @@ function full_report($url_params, $symbol_tab, $sort, $run1, $run2) {
   }
   usort($flat_data, 'sort_cbk');
 
-  print("<br>");
-
-  if (!empty($url_params['all'])) {
-    $all = true;
-    $limit = 0;    // display all rows
-  } else {
-    $all = false;
-    $limit = 100;  // display only limited number of rows
-  }
-
-  $desc = str_replace("<br>", " ", $descriptions[$sort_col]);
-
-  if ($diff_mode) {
-    if ($all) {
-      $title = "Total Diff Report: '
-               .'Sorted by absolute value of regression/improvement in $desc";
-    } else {
-      $title = "Top 100 <i style='color:red'>Regressions</i>/"
-               . "<i style='color:green'>Improvements</i>: "
-               . "Sorted by $desc Diff";
-    }
-  } else {
-    if ($all) {
-      $title = "Sorted by $desc";
-    } else {
-      $title = "Displaying top $limit functions: Sorted by $desc";
-    }
-  }
-  print_flat_data($url_params, $title, $flat_data, $sort, $run1, $run2, $limit);
+  $limit = !empty($url_params['all']) ? count($flat_data) : 100;
+  print_flat_data($url_params, $flat_data, $sort, $run1, $run2, $limit);
 }
 
 
