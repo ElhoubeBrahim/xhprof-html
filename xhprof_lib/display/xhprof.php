@@ -505,7 +505,7 @@ function profiler_report ($url_params,
     "function_calls" => $diff_mode ? $totals_1['ct'] : $totals['ct'],
     "function_calls_diff" => $diff_mode ? $totals_1['ct'] - $totals_2['ct'] : null,
     "meta" => [],
-    "symbol_info" => $diff_mode ? [
+    "symbol_info" => $diff_mode && $symbol_info[0] ? [
       "function_calls" => $symbol_info[0]['ct'],
       "function_calls_diff" => $symbol_info[0]['ct'] - $symbol_info[1]['ct'],
       "meta" => [],
@@ -521,11 +521,11 @@ function profiler_report ($url_params,
       "function_calls" => $totals_2['ct'],
       "function_calls_diff" => $totals_2['ct'] - $totals_1['ct'],
       "meta" => [],
-      "symbol_info" => [
+      "symbol_info" => $symbol_info[1] ? [
         "function_calls" => $symbol_info[1]['ct'],
         "function_calls_diff" => $symbol_info[1]['ct'] - $symbol_info[0]['ct'],
         "meta" => [],
-      ],
+      ] : [],
     ];
   }
 
@@ -546,30 +546,32 @@ function profiler_report ($url_params,
         "diff" => $totals_2[$m] - $totals_1[$m],
       ];
 
-      // Inclusive metrics
-      $runs_data[0]["symbol_info"]["meta"][$descriptions[$m]] = [
-        "value" => $symbol_info[0][$m],
-        "unit" => $unit,
-        "diff" => $symbol_info[0][$m] - $symbol_info[1][$m],
-      ];
-      $runs_data[1]["symbol_info"]["meta"][$descriptions[$m]] = [
-        "value" => $symbol_info[1][$m],
-        "unit" => $unit,
-        "diff" => $symbol_info[1][$m] - $symbol_info[0][$m],
-      ];
-
-      // Exclusive metrics
-      $m = "excl_" . $metric;
-      $runs_data[0]["symbol_info"]["meta"][$descriptions[$m]] = [
-        "value" => $symbol_info[0][$m],
-        "unit" => $unit,
-        "diff" => $symbol_info[0][$m] - $symbol_info[1][$m],
-      ];
-      $runs_data[1]["symbol_info"]["meta"][$descriptions[$m]] = [
-        "value" => $symbol_info[1][$m],
-        "unit" => $unit,
-        "diff" => $symbol_info[1][$m] - $symbol_info[0][$m],
-      ];
+      if ($symbol_info[0] && $symbol_info[1]) {
+        // Inclusive metrics
+        $runs_data[0]["symbol_info"]["meta"][$descriptions[$m]] = [
+          "value" => $symbol_info[0][$m],
+          "unit" => $unit,
+          "diff" => $symbol_info[0][$m] - $symbol_info[1][$m],
+        ];
+        $runs_data[1]["symbol_info"]["meta"][$descriptions[$m]] = [
+          "value" => $symbol_info[1][$m],
+          "unit" => $unit,
+          "diff" => $symbol_info[1][$m] - $symbol_info[0][$m],
+        ];
+  
+        // Exclusive metrics
+        $m = "excl_" . $metric;
+        $runs_data[0]["symbol_info"]["meta"][$descriptions[$m]] = [
+          "value" => $symbol_info[0][$m],
+          "unit" => $unit,
+          "diff" => $symbol_info[0][$m] - $symbol_info[1][$m],
+        ];
+        $runs_data[1]["symbol_info"]["meta"][$descriptions[$m]] = [
+          "value" => $symbol_info[1][$m],
+          "unit" => $unit,
+          "diff" => $symbol_info[1][$m] - $symbol_info[0][$m],
+        ];
+      }
     }
   }
 
@@ -910,7 +912,7 @@ function print_flat_data($url_params, $flat_data, $sort, $run1, $run2, $limit) {
   global $totals;
 
   $size  = count($flat_data);
-  $limit = $limit == 0 ? $size : $limit;
+  $limit = $limit == 0 ? $size : min($size, $limit);
 
 ?>
 
@@ -953,15 +955,15 @@ function print_flat_data($url_params, $flat_data, $sort, $run1, $run2, $limit) {
           </td>
           <?php if ($display_calls) : ?>
             <td><?= $info["ct"] ?></td>
-            <td><?= xhprof_percent_format($info["ct"] / abs($totals["ct"])) ?></td>
+            <td><?=$totals["ct"] == 0 ? 0 : xhprof_percent_format($info["ct"] / abs($totals["ct"])) ?></td>
           <?php endif; ?>
           <?php foreach ($metrics as $metric) : ?>
             <!-- Inclusive metric -->
             <td><?= $info[$metric] ?></td>
-            <td><?= xhprof_percent_format($info[$metric] / abs($totals[$metric])) ?></td>
+            <td><?= $totals[$metric] == 0 ? 0 : xhprof_percent_format($info[$metric] / abs($totals[$metric])) ?></td>
             <!-- Exclusive Metric -->
             <td><?= $info[$metric] ?></td>
-            <td><?= xhprof_percent_format($info["excl_" . $metric] / abs($totals[$metric])) ?></td>
+            <td><?= $totals[$metric] == 0 ? 0 : xhprof_percent_format($info["excl_" . $metric] / abs($totals[$metric])) ?></td>
           <?php endforeach; ?>
         </tr>
       <?php endfor; ?>
