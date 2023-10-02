@@ -3,6 +3,21 @@
 xhprof (or tideways) visualize html tool.
 This repository some modified for especially solo usage from [xhprof repository](https://github.com/phacility/xhprof). 
 
+## Enhancements
+
+Facing the challenge of slow PHP code execution, I sought a solution to gain deeper insights into the performance bottlenecks. That's when I discovered the [xhprof-html](https://github.com/sters/xhprof-html) library, a valuable tool for visualizing xhprof profiling results.
+
+Initially, the tool lacked any styling, presenting the data in a rather basic and unattractive manner. However, as someone who found great value in its functionality, I decided to take it a step further.
+
+I embarked on a project to enhance the design of the tool by integrating Bootstrap CSS, with the goal of making it more pleasing and user-friendly. This transformation not only improved the visual appeal of the tool but also made it more accessible to users seeking to analyze and optimize their PHP code performance.
+
+I also took the intiative to redesign the documentation, enhancing it with a more contemporary appearance and simplified sidebar navigation by using a modern template called [coderDocs](https://themes.3rdwavemedia.com/bootstrap-templates/product/coderdocs-free-bootstrap-5-documentation-template-for-software-projects/)
+
+I hope that these enhancements will make the tool more appealing to users and encourage them to take advantage of its powerful features. 
+
+## Screenshots
+
+![Screenshots](./screenshots.png)
 
 ## Usage
 
