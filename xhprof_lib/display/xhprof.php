@@ -62,25 +62,25 @@ function xhprof_include_js_css($ui_dir_url_path = null) {
   }
 
   // style sheets
-  echo "<link href='$ui_dir_url_path/bootstrap/css/bootstrap.min.css' ".
+  echo "<link href='$ui_dir_url_path/assets/vendor/bootstrap/css/bootstrap.min.css' ".
     " rel='stylesheet' type='text/css' />";
-  echo "<link href='$ui_dir_url_path/css/xhprof.css' rel='stylesheet' ".
+  echo "<link href='$ui_dir_url_path/assets/css/xhprof.css' rel='stylesheet' ".
     " type='text/css' />";
-  echo "<link href='$ui_dir_url_path/jquery/jquery.tooltip.css' ".
+  echo "<link href='$ui_dir_url_path/assets/vendor/jquery/jquery.tooltip.css' ".
     " rel='stylesheet' type='text/css' />";
-  echo "<link href='$ui_dir_url_path/jquery/jquery.autocomplete.css' ".
+  echo "<link href='$ui_dir_url_path/assets/vendor/jquery/jquery.autocomplete.css' ".
     " rel='stylesheet' type='text/css' />";
 
   // javascript
-  echo "<script src='$ui_dir_url_path/jquery/jquery-1.2.6.js'>".
+  echo "<script src='$ui_dir_url_path/assets/vendor/jquery/jquery-1.2.6.js'>".
        "</script>";
-  echo "<script src='$ui_dir_url_path/bootstrap/js/bootstrap.bundle.min.js'>".
+  echo "<script src='$ui_dir_url_path/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'>".
        "</script>";
-  echo "<script src='$ui_dir_url_path/jquery/jquery.tooltip.js'>".
+  echo "<script src='$ui_dir_url_path/assets/vendor/jquery/jquery.tooltip.js'>".
        "</script>";
-  echo "<script src='$ui_dir_url_path/jquery/jquery.autocomplete.js'>"
+  echo "<script src='$ui_dir_url_path/assets/vendor/jquery/jquery.autocomplete.js'>"
        ."</script>";
-  echo "<script src='$ui_dir_url_path/js/xhprof_report.js'></script>";
+  echo "<script src='$ui_dir_url_path/assets/js/xhprof_report.js'></script>";
 }
 
 
@@ -584,7 +584,7 @@ function profiler_report ($url_params,
 <nav class="navbar bg-light rounded border mb-4">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="/img/<?= $diff_mode ? 'diff' : 'report' ?>.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="/assets/images/<?= $diff_mode ? 'diff' : 'report' ?>.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       <span><?= $diff_mode ? 'Diff' : 'Run' ?> Report</span>
     </a>
     <div>
@@ -1203,12 +1203,12 @@ function symbol_report($url_params,
               </td>
               <?php if ($display_calls) : ?>
                 <td><?= $info["ct"] ?></td>
-                <td><?= xhprof_percent_format($info["ct"] / abs($totals["ct"])) ?></td>
+                <td><?= $totals["ct"] == 0 ? 0 : xhprof_percent_format($info["ct"] / abs($totals["ct"])) ?></td>
               <?php endif; ?>
               <?php foreach ($metrics as $metric) : ?>
                 <!-- Inclusive metric -->
                 <td><?= $info[$metric] ?></td>
-                <td><?= xhprof_percent_format($info[$metric] / abs($totals[$metric])) ?></td>
+                <td><?= $totals[$metric] == 0 ? 0 : xhprof_percent_format($info[$metric] / abs($totals[$metric])) ?></td>
               <?php endforeach; ?>
             </tr>
           <?php endforeach; ?>

@@ -158,7 +158,7 @@ class XHProfRuns_Default implements iXHProfRuns {
         // If no valid runs were found
         if (empty($files)) {
             echo "<div class='d-flex flex-column align-items-center text-center gap-4 py-5 my-5'>";
-            echo "<img src='/img/no-data.svg' class='img-fluid' alt='No data' width='300'>";
+            echo "<img src='/assets/images/no-data.svg' class='img-fluid' alt='No data' width='300'>";
             echo "<div class='text-muted'>"
                   . "<div class='mb-2'>No runs found in <pre class='d-inline'>{$this->dir}</pre></div>"
                   . "<div>Use the dir parameter to specify the location of your runs.</div>";
